@@ -1,3 +1,5 @@
+getgenv().SecureMode = true
+
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
@@ -22,7 +24,7 @@ local Window = Rayfield:CreateWindow({
       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"c00lkeyy", "hax0r"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+      Key = {"c00llkeyy", "4eHax0r"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
 
@@ -44,6 +46,10 @@ Rayfield:Notify({
    },
 },
 })
+
+local Paragraph1 = Tab1:CreateParagraph({Title = "We hope you enjoy!", Content = "JailBroken X is an undetectable cheat hub used in various different ways to exploit in Roblox games."})
+
+local Label1 = Tab1:CreateLabel("Domain X planning to be replaced by Sirius if available")
 
 local Button1 = Tab1:CreateButton({
    Name = "Infinite Yield FE",
@@ -97,7 +103,7 @@ local Button2 = Tab1:CreateButton({
    end,
 })
 
-local Button = Tab1:CreateButton({
+local Button3 = Tab1:CreateButton({
    Name = "EclipseHub",
    Callback = function()
    getgenv().mainKey = "nil";
@@ -115,3 +121,33 @@ local Input = Tab1:CreateInput({
    -- The variable (Text) is a string for the value in the text box
    end,
 })
+
+local Button4 = Tab1:CreateButton({
+   Name = "Domain X",
+   Callback = function()
+   loadstring(game:HttpGet('https://sirius.menu/domainx',true))()
+   end,
+})
+
+
+local Button5 = Tab1:CreateButton({
+   Name = "Sense ESP",
+   Callback = function()
+   -- 1. Load the library
+local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
+
+-- 2. Change the configuration.
+Sense.teamSettings.enemy.enabled = true
+Sense.teamSettings.enemy.box = true
+Sense.teamSettings.enemy.boxColor[1] = Color3.new(0, 0.25, 0.75)
+
+-- 3. Load the esp. It doesn't really matter where you put this, but it's recommended you put it at the end of your script.
+Sense.Load()
+
+-- 4. Unload the esp. When you unload Sense, it will clean up every drawing object and instance it has made.
+--Sense.Unload()
+   end,
+})
+
+local Tab2 = Window:CreateTab("Secondary Scripts", 4483362458) -- Title, Image
+
